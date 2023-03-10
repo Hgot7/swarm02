@@ -61,17 +61,17 @@
 ## Create Stack Deploy
 1. สร้างไฟล์ docker-compose.yaml
    ```
-     services:
-     frontend:
-       build:
-         context: .
-         target: dev-envs
-       container_name: frontend
-       ports:
-         - "80:3000"
-         - "3000:3000"
-       volumes:
-         - /var/run/docker.sock:/var/run/docker.sock
+   services:
+   frontend:
+     build:
+       context: .
+       target: dev-envs
+     container_name: frontend
+     ports:
+       - "80:3000"
+       - "3000:3000"
+     volumes:
+       - /var/run/docker.sock:/var/run/docker.sock
    ```
 2. ให้ docker-compose.yaml ไป Stack Deploy on local โดยคำสั่ง
    	```
