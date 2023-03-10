@@ -2,8 +2,8 @@
 ### Ref awaresome-compose
 - [docker/awesome-compose/react-nginx](https://github.com/docker/awesome-compose/tree/master/react-nginx)
 ### Wakatime Project
-- [@spcn10/swarm01](https://wakatime.com/@spcn10/projects/azbfzwwyup?start=2023-02-27&end=2023-03-05)
-### URL-DEPLOY
+- [@spcn10/swarm02](https://wakatime.com/@spcn10/projects/azbfzwwyup?start=2023-02-27&end=2023-03-05)
+### URL-Deploy
 - https://spcn10react.xops.ipv9.me/
 ## Setup-Linux
 1. Set เวลา โดยใช้คำสั่ง
