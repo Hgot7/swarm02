@@ -66,21 +66,7 @@
 	 docker push TARGET_IMAGE[:TAG]
 	 ```
 ## Create Stack Deploy
-1. สร้างไฟล์ docker-compose.yaml
-   ```
-   services:
-   frontend:
-     build:
-       context: .
-       target: dev-envs
-     container_name: frontend
-     ports:
-       - "80:3000"
-       - "3000:3000"
-     volumes:
-       - /var/run/docker.sock:/var/run/docker.sock
-   ```
-2. นำ docker-composeRevertProxy.yaml ไป Stack Deploy on website Edit on portainer.ipv9.me
+1. นำ docker-composeRevertProxy.yaml ไป Stack Deploy on website Edit on portainer.ipv9.me
    ```
     version: '3.3'
     services:
@@ -113,8 +99,7 @@
      webproxy:
        external: true
     volumes:
-     app:
-   
+     app: 
    ```
 ## Result 
 ![image](https://user-images.githubusercontent.com/117428887/224220331-569849e4-ec62-409d-a45d-1f8c2abd3c65.png)
