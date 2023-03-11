@@ -40,19 +40,13 @@
 	```
 	sudo docker run hello-world
 	```
-
-2. ให้ docker-compose.yaml ไป Stack Deploy on local โดยคำสั่ง
-   	```
-   	docker compose up -d --build
-   	```
-3. ตรวจสอบการใช้งานให้พิมพ์ Ip mechine:80 บน Web Browser
-
 ## Build-Image & Tag
 1. คำสั่งการ Build image
 	 ```
 	 sudo docker compose "react-nginx/compose.yaml" up -d --build
 	 ```
-2. คำสั่งการ Tag
+2. ตรวจสอบการใช้งานให้พิมพ์ Ip mechine:80 บน Web Browser
+3. คำสั่งการ Tag
 	 ```
 	 docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
 	 ```
