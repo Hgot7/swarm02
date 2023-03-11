@@ -40,21 +40,7 @@
 	```
 	sudo docker run hello-world
 	```
-## Create Stack Deploy
-1. สร้างไฟล์ docker-compose.yaml
-   ```
-   services:
-   frontend:
-     build:
-       context: .
-       target: dev-envs
-     container_name: frontend
-     ports:
-       - "80:3000"
-       - "3000:3000"
-     volumes:
-       - /var/run/docker.sock:/var/run/docker.sock
-   ```
+
 2. ให้ docker-compose.yaml ไป Stack Deploy on local โดยคำสั่ง
    	```
    	docker compose up -d --build
@@ -79,7 +65,22 @@
 	 ```
 	 docker push TARGET_IMAGE[:TAG]
 	 ```
-## Revert Proxy 
+## Create Stack Deploy
+1. สร้างไฟล์ docker-compose.yaml
+   ```
+   services:
+   frontend:
+     build:
+       context: .
+       target: dev-envs
+     container_name: frontend
+     ports:
+       - "80:3000"
+       - "3000:3000"
+     volumes:
+       - /var/run/docker.sock:/var/run/docker.sock
+   ```
+### Revert Proxy 
    - Revert Proxy File docker-compose-RevProxy.yaml on website Edit For stack on portainer.ipv9.me
      ```
      version: '3.3'
