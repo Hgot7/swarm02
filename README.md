@@ -79,7 +79,6 @@
 	 ```
 	 docker push TARGET_IMAGE[:TAG]
 	 ```
-## Swarm Cluster
 ## Revert Proxy 
    - Revert Proxy File docker-compose-RevProxy.yaml on website Edit For stack on portainer.ipv9.me
      ```
