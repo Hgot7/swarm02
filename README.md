@@ -64,23 +64,23 @@
 ## Build-Image & Tag
 1. คำสั่งการ Build image
 	 ```
-	sudo docker compose "fastapi/compose.yaml" up -d --build
-	```
+	 sudo docker compose "react-nginx/compose.yaml" up -d --build
+	 ```
 2. คำสั่งการ Tag
 	 ```
-	docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
-	```
+	 docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+	 ```
 ## Push Image To Docker Hub
-1.   คำสั่งเข้าสู่ระบบ Docker ใน Vscode
-		```
-		docker login
-		```
-2.   คำสั่ง Push Image To Docker Hub
-		```
-		docker push TARGET_IMAGE[:TAG]
-		```
+1. คำสั่งเข้าสู่ระบบ Docker ใน Vscode
+	 ```
+	 docker login
+	 ```
+2. คำสั่ง Push Image To Docker Hub
+	 ```
+	 docker push TARGET_IMAGE[:TAG]
+	 ```
 ## Swarm Cluster
-### Revert Proxy 
+## Revert Proxy 
    - Revert Proxy File docker-compose-RevProxy.yaml on website Edit For stack on portainer.ipv9.me
      ```
      version: '3.3'
