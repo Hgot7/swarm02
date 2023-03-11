@@ -80,42 +80,42 @@
      volumes:
        - /var/run/docker.sock:/var/run/docker.sock
    ```
-### Revert Proxy 
-   - Revert Proxy File docker-compose-RevProxy.yaml on website Edit For stack on portainer.ipv9.me
-     ```
-     version: '3.3'
-     services:
-      web:
-        image: TARGET_IMAGE[:TAG]
-        networks:
-         - webproxy
-        logging:
-          driver: json-file
-        volumes:
-          - /var/run/docker.sock:/var/run/docker.sock
-        container_name: frontend
-        deploy:
-          replicas: 1
-          labels:
-            - traefik.docker.network=webproxy
-            - traefik.enable=true
-            - traefik.http.routers.${APPNAME}-https.entrypoints=websecure
-            - traefik.http.routers.${APPNAME}-https.rule=Host("${APPNAME}.xops.ipv9.me")
-            - traefik.http.routers.${APPNAME}-https.tls.certresolver=default
-            - traefik.http.services.${APPNAME}.loadbalancer.server.port=80
-          resources:
-            reservations:
-              cpus: '0.1'
-              memory: 10M
-            limits:
-              cpus: '0.4'
-              memory: 50M
-     networks:
-      webproxy:
-        external: true
-     volumes:
-      app:
-    
-     ```
+  ### Revert Proxy 
+     - Revert Proxy File docker-compose-RevProxy.yaml on website Edit For stack on portainer.ipv9.me
+       ```
+       version: '3.3'
+       services:
+        web:
+          image: TARGET_IMAGE[:TAG]
+          networks:
+           - webproxy
+          logging:
+            driver: json-file
+          volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+          container_name: frontend
+          deploy:
+            replicas: 1
+            labels:
+              - traefik.docker.network=webproxy
+              - traefik.enable=true
+              - traefik.http.routers.${APPNAME}-https.entrypoints=websecure
+              - traefik.http.routers.${APPNAME}-https.rule=Host("${APPNAME}.xops.ipv9.me")
+              - traefik.http.routers.${APPNAME}-https.tls.certresolver=default
+              - traefik.http.services.${APPNAME}.loadbalancer.server.port=80
+            resources:
+              reservations:
+                cpus: '0.1'
+                memory: 10M
+              limits:
+                cpus: '0.4'
+                memory: 50M
+       networks:
+        webproxy:
+          external: true
+       volumes:
+        app:
+      
+       ```
 ## Result 
 ![image](https://user-images.githubusercontent.com/117428887/224220331-569849e4-ec62-409d-a45d-1f8c2abd3c65.png)
