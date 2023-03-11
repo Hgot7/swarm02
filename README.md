@@ -40,24 +40,6 @@
 	```
 	sudo docker run hello-world
 	```
-## Build-Image & Tag
-1. คำสั่งการ Build image
-	 ```
-	sudo docker compose "fastapi/compose.yaml" up -d --build
-	```
-2. คำสั่งการ Tag
-	 ```
-	docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
-	```
-## Push Image To Docker Hub
-1.   คำสั่งเข้าสู่ระบบ Docker ใน Vscode
-		```
-		docker login
-		```
-2.   คำสั่ง Push Image To Docker Hub
-		```
-		docker push TARGET_IMAGE[:TAG]
-		```
 ## Create Stack Deploy
 1. สร้างไฟล์ docker-compose.yaml
    ```
@@ -78,7 +60,25 @@
    	docker compose up -d --build
    	```
 3. ตรวจสอบการใช้งานให้พิมพ์ Ip mechine:80 บน Web Browser
-   
+
+## Build-Image & Tag
+1. คำสั่งการ Build image
+	 ```
+	sudo docker compose "fastapi/compose.yaml" up -d --build
+	```
+2. คำสั่งการ Tag
+	 ```
+	docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+	```
+## Push Image To Docker Hub
+1.   คำสั่งเข้าสู่ระบบ Docker ใน Vscode
+		```
+		docker login
+		```
+2.   คำสั่ง Push Image To Docker Hub
+		```
+		docker push TARGET_IMAGE[:TAG]
+		```
 ## Swarm Cluster
 ### Revert Proxy 
    - Revert Proxy File docker-compose-RevProxy.yaml on website Edit For stack on portainer.ipv9.me
