@@ -80,7 +80,7 @@
      volumes:
        - /var/run/docker.sock:/var/run/docker.sock
    ```
-2. นำ docker-compose.yaml ไป Stack Deploy on website Edit on portainer.ipv9.me
+2. นำ docker-composeRevertProxy.yaml ไป Stack Deploy on website Edit on portainer.ipv9.me
    ```
     version: '3.3'
     services:
