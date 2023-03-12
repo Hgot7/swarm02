@@ -72,7 +72,7 @@
          driver: json-file
        volumes:
          - /var/run/docker.sock:/var/run/docker.sock
-       container_name: frontend
+       container_name: TARGET_IMAGE
        deploy:
          replicas: 1
          labels:
